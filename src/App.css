@@ -64,11 +64,24 @@ button {
   z-index: 100;
 }
 
+.pagination {
+  display: block;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding:0.5em;
+}
+
+.pagination > * {
+  margin: 5px;
+}
+
+/* pagination */
+
 .list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90%;
+  height: 85%;
   overflow-y: scroll;
   background-color: white;
   width: 90%;
