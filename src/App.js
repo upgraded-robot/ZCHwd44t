@@ -22,7 +22,7 @@ constructor(props){
   render() {
     return (
       <div className="app">
-        <div className="route-title">{this.props.location.pathname === '/' ? 'list' : 'profile' }</div>
+        <div className="route-title title">{this.props.location.pathname === '/' ? 'people list' : 'profile' }</div>
         { this.props.children && React.cloneElement(this.props.children, {
           people: this.state.people
         }) }

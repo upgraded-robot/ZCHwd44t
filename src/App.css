@@ -1,20 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.subtle {
+  color: gray;
+  font-size: 0.9em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: gray;
+}
+
+a:active {
+  color:#75BBF7;
+}
+
+a:hover {
+  color: #AD6BFF;
+}
+
+a:visited {
+  color: gray;
+}
+
+button {
+  background: transparent;
+  border:none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .app {
   text-align: center;
   width: 400px;
-  background-color: gainsboro;
+  background-color: #DEDEDE;
   margin: 0 auto;
-  height: 550px;
+  height: 670px;
 }
 
 .route-title {
+  font-weight: 400;
   min-height: 40px;
-  font-size: 1.5em;
-  line-height: 2em;
+  height: 5.5em;
+  font-size: 0.7em;
+  line-height: 5.5em;
+  text-align: left;
+  padding: 0 2em;
+  color: white;
+  background: linear-gradient(90deg, rgba(173,107,255,1) 0%, rgba(173,107,255,1) 33%, rgba(117,187,247,1) 66%, rgba(117,187,247,1) 100%);
+  box-shadow: 0 10px 15px -3px darkgray;
+  z-index: 100;
 }
 
 .list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 90%;
-  overflow: scroll;
+  overflow-y: scroll;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 20px;
+}
+
+.list .counter {
+  border-bottom: solid 1px silver;
+  width: 90%;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  min-height: 100px;
+  width: 100%;
+}
+
+.list-item .item-text-info {
+  text-align: left;
+  padding:10px;
+  position: relative;
+  width: 100%;
+  margin-bottom:5px; 
+}
+
+.item-text-info .name {
+  font-family: 'Chivo', sans-serif;
+}
+
+.item-text-info .connections {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
+  bottom: 0;
+  position: absolute;
+}
+
+.list-item img {
+  align-self: center;
+}
+
+
+/* profile view styles */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile img {
+  width: 70%;
+  z-index: 1;
+}
+
+.profile .profile-details {
+  background-color: white;
+  width: 85%;
+  margin: 0 auto;
+  margin-top:-50px;
+  position: relative;
+  z-index: 10;
+  padding: 30px;
+}
+
+.profile-details .title {
+  font-size: 1.5em;
+}
+
+.profile-details .title span {
+  display: block;
+  text-align: left;
+}
+
+.profile-details p {
+  font-family: 'Chivo', sans-serif;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  text-align: left;
+}
+
+.profile-extra-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-children {
+  background-color: white;
+  width: 70%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing:2px;
+}
+
+.profile-children table {
+  margin: 10px 5px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.profile-children td{
+  font-weight: 700;
+}
+
+.profile-children th {
+  font-weight: 400;
+}
+
+.profile-children table td, .profile-children table th {
+  padding: 5px;
 }

@@ -19,13 +19,43 @@ class Profile extends Component {
 	}
 	render(){
 		return (
-			<div>
-				<div> {this.state.person.children.length}</div>
+			<div className="profile">
 				<img src={this.state.person.avatar['x-large']} />
-				<div>{ this.state.person.firstName +' '+ this.state.person.lastName}</div>
-				<div>{ this.state.person.twitterUser}</div>
-				<div>{ this.state.person.bio }</div>
-				<div>{ this.state.person.country }</div>
+				<div className="profile-details">
+					<h1 className="title">
+						<span>{ this.state.person.firstName }</span>
+						<span>{ this.state.person.lastName }</span>
+					</h1>
+					<div className="profile-extra-info subtle">
+						<span>{ this.state.person.country }</span>
+						<span>
+							<a href={ 'https://twitter.com/'+this.state.person.twitterUser }>
+								@{ this.state.person.twitterUser }
+							</a>
+						</span>
+					</div>
+					<p>{ this.state.person.bio }</p>
+				</div>
+				
+				<div className="profile-children"> 
+					<h2 className="subtle"># of Conections</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>1st level</th>
+								<th>2nd level</th>
+								<th>3rd level</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{ this.state.person.children.length }</td>
+								<td> </td>
+								<td> </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 				{/*<div>
 					<span>children</span>
 					<span>grandchildren </span>
