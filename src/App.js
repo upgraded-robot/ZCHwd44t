@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import NavBar from './components/NavBar'
 
 class App extends Component {
 constructor(props){
@@ -27,16 +28,16 @@ constructor(props){
     console.log(typeof(this.state.currentPage ))
     return (
       <div className="app">
-        <div className="route-title title">{this.props.location.pathname === '/' ? 'people list' : 'profile' }</div>
+        <NavBar location={this.props.location.pathname === '/' ? 'list' : 'profile' }></NavBar>
         { this.props.children && React.cloneElement(this.props.children, {
           people: this.state.people
         }) }
         {
-          this.props.location.pathname === '/' ?
+          this.props.location.pathname ==='/' ?
           <div className="pagination">
-            { this.state.currentPage === 1 ? null : <button>previous</button> }
+            { this.state.currentPage == 1 ? null : <button>previous</button> }
             <span>page {this.state.currentPage}</span>
-            { this.state.currentPage === this.state.pages ? null : <button onClick={ this.getPeople.bind(this, next) }>next</button> }
+            { this.state.currentPage == this.state.pages ? null : <button onClick={ this.getPeople.bind(this, next) }>next</button> }
           </div>
           : null
         }
